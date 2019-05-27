@@ -13,4 +13,4 @@ Foreach ($g in $toll)
     Write-Host "⚰️"
 }
 
-Write-Host "🌙 The repear returns to his resting until death tolls again..."
+Write-Host "🌙 The reaper returns to his resting until death tolls again..."
