@@ -9,7 +9,7 @@ $toll = Get-AzResourceGroup | Where-Object ResourceGroupName -like 'deleteme*'
 Foreach ($g in $toll)
 {
     Write-Host "Goodbye $($g.ResourceGroupName) 🔔..."
-    Remove-AzResourceGroup -Name $g.ResourceGroupName -Force
+    Remove-AzResourceGroup -Name $g.ResourceGroupName -Force -AsJob
     Write-Host "⚰️"
 }
 
