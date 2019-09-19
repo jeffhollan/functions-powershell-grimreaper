@@ -4,7 +4,9 @@ param($Timer)
 # Write an information log with the current time.
 Write-Host "The grim reaper arises to find those for whom death tolls ☠️"
 
-$toll = Get-AzResourceGroup | Where-Object ResourceGroupName -like 'deleteme*'
+$toll = @()
+$toll += Get-AzResourceGroup | Where-Object ResourceGroupName -like 'deleteme*'
+$toll += Get-AzResourceGroup | Where-Object ResourceGroupName -like 'd-*'
 
 Foreach ($g in $toll)
 {
