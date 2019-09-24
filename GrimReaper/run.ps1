@@ -7,6 +7,7 @@ Write-Host "The grim reaper arises to find those for whom death tolls ☠️"
 $toll = @()
 $toll += Get-AzResourceGroup | Where-Object ResourceGroupName -like 'deleteme*'
 $toll += Get-AzResourceGroup | Where-Object ResourceGroupName -like 'd-*'
+$toll += Get-AzResourceGroup -Tag @{"keep-alive"="false"}
 
 Foreach ($g in $toll)
 {
